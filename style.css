@@ -1,0 +1,218 @@
+@font-face {
+    font-family: philosopher;
+    src: url(Philosopher-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/2646033/pexels-photo-2646033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #3b393a;
+}
+
+.logo {
+    width: 500px;
+}
+
+header {
+    /* Centalizar logo*/
+    display: flex;
+    justify-content: center;
+}
+
+.sob {
+    font-size: 50px;
+}
+
+.sobs {
+    margin-bottom: 50px;
+    color: #3b393a;
+    margin-left: 50px;
+}
+
+.sobs p {
+    font-size: 25px;
+}
+
+section {
+    font-family: sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.face {
+    width: 500px;
+    height: 420px;
+    perspective: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.tipos {
+    font-size: 20px;
+    width: 500px;
+    height: 350px;
+    perspective: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.font {
+    text-align: center;
+    margin-top: 190px;
+}
+
+.fonts {
+    text-align: center;
+    margin-top: 140px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.front,
+.back {
+    width: 350px;
+    text-align: justify;
+    height: 100%;
+    position: absolute;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 700ms;
+}
+
+.front {
+    background-color: rgba(244, 139, 43, 0.8);
+    z-index: 1;
+    color: #fff;
+}
+
+.back {
+    background-color: #fff;
+    color: #884200;
+    transform: rotateY(-180deg);
+    /* Rotação*/
+    backface-visibility: hidden;
+}
+
+.face:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.face:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+}
+
+.tipos:hover .front {
+    transform: rotateY(180deg);
+    z-index: 0;
+}
+
+.tipos:hover .back {
+    transform: rotateY(0);
+    z-index: 1;
+}
+
+.title {
+    margin-top: 90px;
+    color: #f48b2b;
+    /* Borda da fonte*/
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    padding: 30px;
+    font-size: 70px;
+    text-align: center;
+}
+
+.title1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.list {
+    padding: 30px;
+    font-weight: 800;
+    /* Grossura da Fonte*/
+    font-size: 20px;
+}
+
+.card {
+    background-color: rgb(244, 139, 43);
+    justify-content: center;
+    width: 800px;
+    /* Largura do card*/
+    text-align: justify;
+    padding: 25px;
+    box-shadow: 6px 10px 20px rgb(121, 121, 125);
+    /* Sombra do card*/
+    margin: auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.conteudo {
+    height: 70px;
+    overflow: hidden;
+    /* Esconder conteúdo*/
+}
+
+#read-button {
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+#read-button:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.card.active .conteudo {
+    height: auto;
+}
+
+.card.active .conteudo::before {
+    visibility: hidden;
+    /* Aparecer todo conteúdo quando o botão estiver ativo*/
+}
+
+footer {
+    background-color: #f48b2b;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+}
+
+footer .E {
+    margin-left: 50px;
+}
+
+footer .A {
+    margin-left: 90px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    margin: 10px;
+
+}
+
+a:hover {
+    opacity: 0.6;
+}
